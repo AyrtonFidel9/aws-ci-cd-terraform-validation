@@ -1,0 +1,22 @@
+version: 0.2
+
+env:
+  variables:
+    CODE_SRC_DIR: "."
+
+phases:
+  install:
+    commands:
+      - "sudo yum install -y yum-utils"
+      - "sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo"
+      - "sudo yum -y install terraform"
+  build:
+    commands:
+      - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}"
+      - "echo ## TERRAFORM INIT : Initialize the Terraform Workspace"
+      - "terraform init -backend-config='./envs/backend-env.hcl'"
+      - "echo ## VALIDATION : Starting ..."
+      - "terraform validate"
+artifacts:
+  files:  
+    - '**/*'
