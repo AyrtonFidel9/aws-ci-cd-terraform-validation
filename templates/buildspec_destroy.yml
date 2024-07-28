@@ -14,10 +14,8 @@ phases:
     commands:
       - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}"
       - "ls -l"
-      - "echo ## TERRAFORM INIT : Initialize the Terraform Workspace"
-      - "terraform init -backend-config='./envs/backend-env.hcl'"
-      - "echo ## VALIDATION : Starting ..."
-      - "terraform validate"
+      - "echo ## TERRAFORM APPLY"
+      - "terraform destroy -var-file='./envs/env.tfvars' -auto-approve"
 artifacts:
   files:  
     - '**/*'

@@ -1,4 +1,4 @@
 /envs/backend.hcl
-/envs/dev.tfvars
+/envs/pipeline.tfvars
 .terraform
 .terraform.lock.hcl

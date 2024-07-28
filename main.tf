@@ -32,7 +32,7 @@ module "s3_bucket" {
 
   tags = {
     Name                = "codepipeline-${var.application}-${var.environment}-bucket"
-    Description         = "This key is used to encrypt bucket objects"
+    Description         = "This key is used to encrypt bucket objects."
     Environment         = var.environment
     CreatedBy           = var.created_by
     Application         = var.application

@@ -1,7 +1,6 @@
 variable "aws_region" {}
 variable "aws_profile" {}
 
-
 variable "build_projects" {
   description = "Build projects names to make the pipeline"
   type = list(string)

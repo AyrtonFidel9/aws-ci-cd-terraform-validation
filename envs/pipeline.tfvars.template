@@ -11,9 +11,9 @@ stages_input = [
 build_projects = [ "validate", "plan", "apply", "destroy"]
 
 
-created_by         = "Fidel Avalos"
+created_by         = "Fidel Avalos Cuadrado"
 application        = "terraform-cicd"
 cost_center        = "ND"
-contact            = "aavalos@krugercorporation.com"
+contact            = "aavalos@mailito.com"
 maintenance_window = "ND"
 deletion_date      = "ND"
